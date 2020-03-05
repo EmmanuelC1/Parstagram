@@ -168,7 +168,7 @@
                         <viewLayoutGuide key="safeArea" id="87d-Tq-OLA"/>
                     </view>
                     <navigationItem key="navigationItem" id="I4g-Bm-qJO">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="nU2-KE-0k4">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" style="plain" id="nU2-KE-0k4">
                             <connections>
                                 <segue destination="7UT-TS-Y5A" kind="presentation" id="tI3-RD-cC3"/>
                             </connections>
