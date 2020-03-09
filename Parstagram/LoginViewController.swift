@@ -14,12 +14,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
 
+    //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    //MARK: onSignIn
     @IBAction func onSignIn(_ sender: Any) {
         let username = usernameField.text!
         let password = passwordField.text!
@@ -34,6 +36,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    //MARK: onSignUp
     @IBAction func onSignUp(_ sender: Any) {
         let user = PFUser()
         user.username = usernameField.text

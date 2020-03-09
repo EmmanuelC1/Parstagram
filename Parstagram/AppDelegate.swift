@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 configuration.server = "https://quiet-cliffs-57419.herokuapp.com/parse"
             })
         )
-        
         return true
     }
 

@@ -15,12 +15,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentField: UITextField!
     
+    //MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    //MARK: onSubmit
     @IBAction func onSubmit(_ sender: Any) {
         //Create table called Posts
         let post = PFObject(className: "Posts")
@@ -50,6 +52,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
     }
     
+    //MARK: onCameraButton
     @IBAction func onCameraButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -66,6 +69,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         present(picker, animated: true, completion: nil)
     }
     
+    //MARK: imagePickerController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //Get image from imagePicker
         let image = info[.editedImage] as! UIImage
@@ -73,6 +77,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         //Scale image to 300x300 and store it in scaledImage variable
         let size = CGSize(width: 300, height: 300)
         let scaledimage = image.af_imageScaled(to: size)
+        //af_imageAspectScaled(toFill: size)
         
         //Put scaledImage in imageView
         imageView.image = scaledimage
